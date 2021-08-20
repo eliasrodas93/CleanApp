@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let item of data | keyvalue: originalOrder; let i = index">
+        {{item.key}} - {{item.value.value ? item.value.value : ''}}
+        <app-nav *ngIf="!item.value.value" [data]="item.value"></app-nav>
+    </li>
+</ul>
